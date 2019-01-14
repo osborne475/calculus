@@ -108,7 +108,7 @@ The solid of revolution is shown below:
   since the radius is $2$ and the height is $1$.  On the other hand,
   to compute the volume of the pointy-shape, let's consider the
   following cross-sections:
-      \begin{image}
+      \begin{image}  %the images are not showing up (I have tried 3 different browsers)
     \begin{tikzpicture}[
         declare function = {f(\x) = pow(\x,2);} ]
       \begin{axis}[
@@ -137,7 +137,7 @@ The solid of revolution is shown below:
       \end{image}
       Where each radius of the cross-section is given (in terms of $y$) by
       \[
-      \text{radius} = \answer[given]{3-\sqrt{y}}.
+      \text{radius} = \answer[given]{3-\sqrt{y}}.  %This is a washer (not a disk)... so you need an inner radius.
       \]
       Hence
       \[
@@ -145,12 +145,12 @@ The solid of revolution is shown below:
       \]
       and so the volume of the pointy-shape is
       \begin{align*}
-        \int_{\answer[given]{1}}^{\answer[given]{9}} \pi (3-\sqrt{y})^2 \d y
-        &= \pi \int_{\answer[given]{1}}^{\answer[given]{9}} 9-6\sqrt{y}+y \d y\\
-        &=\pi\cdot \eval{\answer[given]{9y-4y^{3/2} + y^2/2}}_{\answer[given]{1}}^{\answer[given]{9}}\\
+        \int_{\answer[given]{0}}^{\answer[given]{9}} \pi [(3-\sqrt{y})^2 - 2^2]\d y  %it is a washer, not a disk....
+        &= \pi \int_{\answer[given]{1}}^{\answer[given]{9}} 9-6\sqrt{y}+y - 4 \d y\\  
+        &=\pi\cdot \eval{\answer[given]{9y-4y^{3/2} + y^2/2}}_{\answer[given]{1}}^{\answer[given]{9}}\\ %I didn't correct this line.
         &=\pi\cdot \answer[given]{8}.
       \end{align*}
-      Thus the volume of the complete object is $\answer[given]{12\pi}$.
+      Thus the volume of the complete object is $\answer[given]{1.5\pi}$.
 \end{hint}
 
 \end{exercise}
